@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 
 data_file_path = "TMR.txt"
 separator = "\t"
@@ -56,8 +57,26 @@ def plot_TMR(xpoints, ypoints):
     # Display the plot
     plt.show()
 
+def plot_RA(xpoints, ypoints):
+
+    # Plot the points and connect with a line
+    plt.plot(xpoints, ypoints, color= "black", marker='s')
+    plt.grid(True)
+
+    # Add labels and a title
+    plt.xlabel("Applied Field (Oe)")
+    plt.ylabel("RA (MΩ $\mu$m$^2$)")
+    # plt.yscale('log') # Set the y-axis to logarithmic scale
+    plt.title("RA")
+
+    plt.savefig("TMR_RA.png", dpi=300, transparent=False, bbox_inches='tight')
+
+    # Display the plot
+    plt.show()
+
 if __name__ == "__main__":
     field, resistance = read_data()
     plot_R(field, resistance)
     R_p = np.min(resistance)
     plot_TMR(field, (resistance-R_p)/R_p*100)
+    plot_RA(field, resistance / 1000 * math.pi * 100**2)
