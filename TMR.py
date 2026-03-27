@@ -65,7 +65,7 @@ def plot_RA(xpoints, ypoints):
 
     # Add labels and a title
     plt.xlabel("Applied Field (Oe)")
-    plt.ylabel("RA (MΩ $\mu$m$^2$)")
+    plt.ylabel("RA (MΩ μm$^2$)")
     # plt.yscale('log') # Set the y-axis to logarithmic scale
     plt.title("RA")
 
