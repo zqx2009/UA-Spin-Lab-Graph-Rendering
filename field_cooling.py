@@ -4,6 +4,7 @@ import pandas as pd
 
 plot_debug = False
 remove_wafer_background = True
+y_scaling_degree = -7
 
 sample_data_path = "field_cooling_sample.dat"
 wafer_data_path = "field_cooling_wafer.dat"
@@ -102,10 +103,10 @@ if plot_debug:
     plt.show()
 
 """ field cooling nad 0 field cooling in one graph """
-plt.scatter(sample_data_temp_field, sample_data_moment_field, label="NiO Sample Field Cooling")
-plt.scatter(sample_data_temp_0_field, sample_data_moment_0_field, label="NiO Sample 0 Field Cooling")
+plt.scatter(sample_data_temp_field, sample_data_moment_field * 10**(-y_scaling_degree), label="NiO Sample Field Cooling")
+plt.scatter(sample_data_temp_0_field, sample_data_moment_0_field * 10**(-y_scaling_degree), label="NiO Sample 0 Field Cooling")
 plt.xlabel('Temperature (K)')
-plt.ylabel('Moment (emu)')
+plt.ylabel(f'Moment ($10^{{{y_scaling_degree}}}$ emu)')
 plt.grid()
 plt.legend()
 plt.savefig(output_path, dpi=300, transparent=False, bbox_inches='tight')
