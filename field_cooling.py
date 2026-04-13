@@ -8,6 +8,8 @@ remove_wafer_background = True
 sample_data_path = "field_cooling_sample.dat"
 wafer_data_path = "field_cooling_wafer.dat"
 
+output_path = "field_cooling.png"
+
 def read_csv_to_json(csv_file_path):
     df = pd.read_csv(csv_file_path, keep_default_na=False)      # keep_default_na = True: return NaN if empty; keep_default_na = False: return '' if empty
     return df.to_dict(orient='records')
@@ -106,4 +108,5 @@ plt.xlabel('Temperature (K)')
 plt.ylabel('Moment (emu)')
 plt.grid()
 plt.legend()
+plt.savefig(output_path, dpi=300, transparent=False, bbox_inches='tight')
 plt.show()
