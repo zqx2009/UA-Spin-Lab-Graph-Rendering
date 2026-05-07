@@ -21,7 +21,7 @@ H = np.array([d["Magnetic Field (Oe)"] for d in data_low_temp])
 M = np.array([d["Moment (emu)"] for d in data_low_temp])
 
 plt.scatter(H, M)
-plt.xlabel('"Magnetic Field (Oe)')
+plt.xlabel('Magnetic Field (Oe)')
 plt.ylabel('Moment (emu)')
 plt.grid()
 plt.savefig(output_path, dpi=300, transparent=False, bbox_inches='tight')
