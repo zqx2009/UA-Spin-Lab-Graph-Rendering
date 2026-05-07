@@ -44,6 +44,7 @@ if __name__ == "__main__":
     ax.set_xlabel('Magnetic Field (Oe)')
     ax.set_ylabel('Moment (emu)')
     ax.grid(linewidth = 0.3)
+    ax.text(0.85, 0.1, "10K", transform=ax.transAxes, fontsize=40, ha='center', va='center')
 
     """ Inset """
     ax_inset = ax.inset_axes([0.16, 0.58, 0.4, 0.4])
@@ -58,4 +59,4 @@ if __name__ == "__main__":
     ax_inset.set_ylim(-400, 400)
     ax_inset.grid(linewidth = 0.2)
     plt.savefig(save_graph_file_path, dpi=300, transparent=False, bbox_inches='tight')
-    # plt.show()
+    plt.show()
