@@ -86,7 +86,7 @@ def draw_Binek_model(axis: plt.Axes, Hexc, cycle_list):
         h_next = fit_heb[-1] - gamma * (fit_heb[-1] - h_inf)**3
         fit_heb.append(h_next)
 
-    axis.plot(fit_n, fit_heb, color = "blue", marker='s', markersize=3, linewidth = 1, label=f"Fit $\\gamma={gamma:.2e}$")
+    axis.plot(fit_n, fit_heb, color = "blue", linewidth = 1, label=f"Fit")
     axis.legend()
 
 if __name__ == "__main__":
