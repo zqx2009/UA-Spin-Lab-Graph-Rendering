@@ -1,4 +1,4 @@
-Field (T)	Resistance(Ohms)
+Field (T)	Resistance (Ohms)
 3.75E-01	2.0578230E+06
 3.75E-01	2.0592620E+06
 2.43E+00	2.0565310E+06
