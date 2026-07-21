@@ -71,11 +71,7 @@ RA = [110000, 1.18E+05, 9.51E+05, 1.43E+06, 4.13E+06]
 plt.figure(figsize=(6,4))
 plt.bar(Oxygen_percentage, RA, width=0.4, color = "black")
 
-<<<<<<< HEAD
-plt.xlabel("O2%")
-=======
 plt.xlabel("O$_2$%")
->>>>>>> 5cdd3d9 (git commit -m "updated oxygen vs RA ")
 plt.ylabel("RA (MΩ μm²)")
 plt.grid(axis = "y", alpha=0.3)
 plt.savefig('jerrick_graph_practices/Oxygen_percentage_vs_RA.png', dpi=300, transparent=False, bbox_inches='tight')
